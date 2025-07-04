@@ -22,12 +22,12 @@ const App = () => (
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
     </Routes>
+    <About/>
     <Services/>
     {/* <Solutions/> */}
     {/* <Solution/> */}
     <Contact/>
     <Footer />
-    <img src="./assets/3 sided mesh partition with gate.jpeg"></img>
   </Router>
   </div>
 );

@@ -96,11 +96,11 @@ const Solutions = () => {
 
       {/* Modal Viewer */}
       {selectedImage && (
-        <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+        <div className="fixed inset-0 backdrop-blur-2xl bg-opacity-80 flex items-center justify-center z-50">
           <div className="relative max-w-3xl w-full mx-4">
             <button
               onClick={closeModal}
-              className="absolute top-2 right-2 text-white text-3xl font-bold"
+              className="absolute top-2 right-2 text-primary text-3xl font-bold"
             >
               &times;
             </button>
@@ -111,7 +111,7 @@ const Solutions = () => {
               className="w-full max-h-[80vh] object-contain"
             />
 
-            <div className="flex justify-between mt-4 text-white px-4">
+            <div className="flex justify-between mt-4 text-primary px-4">
               <button onClick={showPrev} className="text-lg font-semibold">&larr; Prev</button>
               <button onClick={showNext} className="text-lg font-semibold">Next &rarr;</button>
             </div>

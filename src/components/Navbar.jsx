@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import logo from "../assets/logo.jpeg"; // Make sure the path is correct
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -8,24 +9,34 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="border-b bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
+    <nav className="border-b bg-background/95 backdrop-blur-3xl supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
+          {/* Logo + Brand */}
           <div className="flex items-center space-x-2">
-            <a href="/">
-              <span className="text-2xl font-bold text-primary">V I X E L</span>
+            <a href="/" className="flex items-center space-x-2">
+              <img
+                src={logo}
+                alt="Vixel Logo"
+                className="h-10 w-auto object-contain"
+              />
+              <span className="hidden sm:inline text-2xl font-bold text-primary">V I X E L</span>
             </a>
           </div>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden md:flex items-center space-x-5">
             <a href="/Solution" className="text-foreground/80 hover:text-foreground transition-colors">Solution</a>
             <a href="#services" className="text-foreground/80 hover:text-foreground transition-colors">Services</a>
             <a href="#about" className="text-foreground/80 hover:text-foreground transition-colors">About</a>
             <a href="#contact" className="text-foreground/80 hover:text-foreground transition-colors">Contact</a>
-            <button className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-md h-10 px-4 py-2 text-sm font-medium">
-              Get Quote
-            </button>
+         <a
+  href="#contact"
+  className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-md h-10 px-4 py-2 text-sm font-medium"
+>
+  Get Quote
+</a>
+
           </div>
 
           {/* Mobile Menu Toggle */}

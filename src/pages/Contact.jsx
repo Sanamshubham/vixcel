@@ -6,7 +6,7 @@ const Contact = () => (
     <div className="container mx-auto px-4">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">Get In Touch</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">Get In Touch</h2>
           <p className="text-lg text-muted-foreground">Ready to transform your space? Contact us for a consultation.</p>
         </div>
         <div className="grid md:grid-cols-2 gap-12">
