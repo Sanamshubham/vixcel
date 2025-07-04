@@ -37,6 +37,9 @@ const Solutions = () => {
   };
 
   return (
+
+
+  <div>  
     <div className="p-6 bg-secondary/10 min-h-screen">
       {/* <h1 className="text-3xl md:text-4xl font-bold mb-8 text-center text-foreground">
         Storage Solutions
@@ -118,6 +121,8 @@ const Solutions = () => {
           </div>
         </div>
       )}
+    </div>
+
     </div>
   );
 };
