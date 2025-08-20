@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import solutionsData from "../data/solution";
+import solutionsData from "../data/solutionsData";
 
 const Solutions = () => {
   const [currentPage, setCurrentPage] = useState(1);

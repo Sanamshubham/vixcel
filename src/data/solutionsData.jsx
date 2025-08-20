@@ -38,7 +38,17 @@ import image24 from "../assets/image8.jpg";
 
 import image25 from "../assets/image6.jpg";
 
-
+// const solutionsData = [
+//   { title: "Gas Locker", description: "Secure gas storage", image: img1 },
+//   { title: "PPGI Cabinet", description: "Durable storage", image: img2 },
+//   { title: "Fireproof Locker", description: "Safety assured", image: img3 },
+//   { title: "Tool Cabinet", description: "Organized tools", image: img1 },
+//   { title: "Component Storage", description: "Efficient storage", image: img2 },
+//   { title: "PP Cabinet", description: "High-quality storage", image: img3 },
+//   { title: "Bulk Storage", description: "Large capacity", image: img1 },
+//   { title: "Trolley", description: "Portable storage", image: img2 },
+//   { title: "Pallet Cabinet", description: "Heavy duty", image: img3 },
+// ];
 
 
 
@@ -51,48 +61,56 @@ const  solutionsData = [
   {
     "title": "Extra Heavy Duty Industrial Cupboard",
     "image": image3,
-    "description": "Secure, durable solution for industrial storage."
+    "description": "Secure, durable solution for industrial storage.",
+    category: "oil-gas"
   },
   {
     "title": "Heavy Duty CNC Tools Storage Cupboard",
     "image": image4,
-    "description": "Organized CNC tool storage for workshops."
+    "description": "Organized CNC tool storage for workshops.",
+    category: "oil-gas"
   },
 
   {
     "title": "Heavy Duty Industrial Cupboard",
     "image": image4,
-    "description": "Steel-built cabinet ideal for tool and parts storage."
+    "description": "Steel-built cabinet ideal for tool and parts storage.",
+    category: "oil-gas"
   },
   {
     "title": "Heavy duty low heaight student locker optional with or withot MDF top",
     "image": image6,
-    "description": "Organized CNC tool storage for workshops."
+    "description": "Organized CNC tool storage for workshops.",
+    category: "oil-gas"
   },
   {
     "title": "Heavy duty material handling trolley with 02 MDF levels ",
     "image": image7,
-    "description": "Drawer system for industrial tool management."
+    "description": "Drawer system for industrial tool management.",
+     category: "industrial"
   },
   {
     "title": "Heavy duty mesh trolley",
     "image": image8,
-    "description": "Protective housing for industrial PCs."
+    "description": "Protective housing for industrial PCs.",
+     category: "industrial"
   },
   {
     "title": "Heavy duty modular work bench with steel top optional tops MDF,HPL or hardwood tops",
     "image": image9,
-    "description": "Secure delivery lockers for outdoor environments."
+    "description": "Secure delivery lockers for outdoor environments.",
+     category: "industrial"
   },
   {
     "title": "Heavy duty movable double sided bins rack",
     "image": image10,
-    "description": "Multi-compartment pigeon-hole locker."
+    "description": "Multi-compartment pigeon-hole locker.",
+     category: "industrial"
   },
   {
     "title": "Multi door steel locker",
     "image": image5,
-    "description": "High-capacity locker with multiple doors."
+    "description": "High-capacity locker with multiple doors.",
   },
   {
     "title": "Steel locker with bench",

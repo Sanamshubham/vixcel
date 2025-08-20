@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { industries } from "./IndustriesData";
+import { industries } from "./industries";
 
 const IndustryDetails = () => {
   const { id } = useParams();
