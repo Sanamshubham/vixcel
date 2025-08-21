@@ -61,7 +61,7 @@ const Services = () => {
             Industries We Serve and Our Solutions
           </h2>
           <p className="text-[#8B4513] max-w-xl mx-auto">
-            Comprehensive <strong>storage</strong> solutions designed to meet your specific needs.
+            Comprehensive <strong>storage</strong> solutions designed to meet your specific needs and requirements.
           </p>
         </div>
 
@@ -150,6 +150,12 @@ const Services = () => {
                   <li key={i}>{f}</li>
                 ))}
               </ul>
+  
+                <h3 className="text-2xl font-bold text-primary text-center mt-4 mb-4">{selected.title2}</h3>
+
+
+
+
               {/* Solutions Grid */}
               <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                 {solutionsData
