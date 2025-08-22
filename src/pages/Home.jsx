@@ -1,12 +1,30 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
+
+import sampleImage from "../assets/Model 033.jpg"; // replace with your own image
+
+
+// Import your images
+import img1 from "../assets/image5.jpeg";
+import img2 from "../assets/image8.jpg";
+import img3 from "../assets/Model 077.jpg";
+import img4 from "../assets/Model 071.jpg";
+import img5 from "../assets/Model 031.jpg";
+// import img6 from "../assets/Model 033.jpg";
+// import img7 from "../assets/Model 029.jpg";
 
 const Home = () => {
+
+
+  const images = [img1, img2, img3, img4, img5];
+  const [selectedImage, setSelectedImage] = useState(images[0]);
+
   return (
     <div>
       {/* HERO SECTION */}
       <section className="py-20 lg:py-32 bg-gradient-to-br from-background to-secondary/20">
         <div className="container mx-auto px-4 text-center">
-         
+
           {/* Title */}
           <motion.h1
             initial={{ opacity: 0, y: 50 }}
@@ -31,8 +49,8 @@ const Home = () => {
             transition={{ delay: 0.5, duration: 1 }}
             className="text-xl text-muted-foreground mt-6 max-w-3xl mx-auto leading-relaxed"
           >
-           Whether it's tools cart, industrial workstations, safety cabinets, secured lockers or heavy duty cabinets, we bring
-           precision, safety, and elegance to every corner of your space
+            Whether it's tools cart, industrial workstations, safety cabinets, secured lockers or heavy duty cabinets, we bring
+            precision, safety, and elegance to every corner of your space
           </motion.p>
 
           {/* Buttons */}
@@ -125,32 +143,71 @@ const Home = () => {
       </section>
 
 
-{/* INTERACTIVE LINES SECTION */}
-<section className="py-20 lg:py-32 bg-gradient-to-br from-white to-gray-50">
-  <div className="container mx-auto px-4 text-center">
-    {[
-      "Welcome to your trusted destination for custom built storage solutions",
-      "Whether it’s tool carts, industrial workstations, safety cabinets, secured lockers, or heavy-duty cabinets",
-      "We bring precision, safety, and elegance to every corner of your space",
-      "Crafted for Strength, Designed for Style",
-      "Premium lockers, cabinets, and industrial workstations that last a lifetime",
-    ].map((line, i) => (
-      <motion.p
-        key={i}
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: i * 0.4 }}
-        viewport={{ once: true, amount: 0.4 }}
-        className="text-lg md:text-xl text-primary font-semibold mb-6 max-w-3xl mx-auto leading-relaxed tracking-wide"
-      >
-        {line}
-      </motion.p>
-    ))}
-  </div>
-</section>
 
-    </div>
-  );
+    <section className="py-20 lg:py-32 bg-gradient-to-br from-white to-gray-50">
+      <div className="container mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+        {/* LEFT SIDE - IMAGE GALLERY */}
+        <div className="flex gap-6">
+          {/* Thumbnails */}
+          <div className="flex flex-col gap-4">
+            {images.slice(0, 6).map((img, i) => (
+              <motion.img
+                key={i}
+                src={img}
+                alt={`thumb-${i}`}
+                onClick={() => setSelectedImage(img)}
+                className={`w-24 h-24 object-cover rounded-md cursor-pointer border-2 transition ${
+                  selectedImage === img ? "border-primary" : "border-gray-200"
+                }`}
+                whileHover={{ scale: 1.1 }}
+              />
+            ))}
+          </div>
+
+          {/* Main Image */}
+          <motion.img
+            key={selectedImage}
+            src={selectedImage}
+            alt="Selected"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+           className="rounded-xl shadow-lg w-full max-w-md !h-506 sm:!h-604 md:!h-130 object-contain"
+
+          />
+        </div>
+
+        {/* RIGHT SIDE - TEXT CARDS */}
+        <div className="space-y-5 text-center md:text-left">
+          {[
+            "Welcome to your trusted destination for custom built storage solutions",
+            "Whether it’s tool carts, industrial workstations, safety cabinets, secured lockers, or heavy-duty cabinets",
+            "We bring precision, safety, and elegance to every corner of your space",
+            "Crafted for Strength, Designed for Style",
+            "Premium lockers, cabinets, and industrial workstations that last a lifetime",
+          ].map((line, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: i * 0.2 }}
+              viewport={{ once: true, amount: 0.3 }}
+              whileHover={{ scale: 1.05, backgroundColor: "#f9fafb" }}
+              className="bg-white p-5 rounded-lg shadow-md hover:shadow-xl cursor-pointer border border-gray-200"
+            >
+              <motion.p className="text-base md:text-lg text-primary font-semibold leading-relaxed tracking-wide">
+                {line}
+              </motion.p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+   </div>
+
+        );
+    
 };
 
-export default Home;
+        export default Home;
