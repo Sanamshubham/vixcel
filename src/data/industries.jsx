@@ -22,7 +22,7 @@ export const industries = [
   {
     title: "Industrial & Manufacturing Sector",
     title1: "Customized Solutions",
-    title2: "Industrial & Manufacturing Sector",
+    title2: "Pictures for Industrial & Manufacturing Sector",
     category: "industrial",
     icon: <FaIndustry className="text-3xl text-primary" />,
     features: [
@@ -44,7 +44,7 @@ export const industries = [
   {
     title: "Logistics & Fulfillment Sector",
     title1: "Customized Solutions",
-    title2: "Logistics & Fulfillment Sector",
+    title2: "Pictures for Logistics & Fulfillment Sector",
     category: "logistics",
     icon: <FaShippingFast className="text-3xl text-primary" />,
     features: [
@@ -65,7 +65,7 @@ export const industries = [
   {
     title: "Hospitality Sector",
     title1: "Customized Solutions",
-    title2: "Hospitality Sector",
+    title2: "Pictures for Hospitality Sector",
     category: "hospitality",
     icon: <FaHotel className="text-3xl text-primary" />,
     features: [
@@ -87,7 +87,7 @@ export const industries = [
   {
     title: "Educational Sector",
     title1: "Customized Solutions",
-    title2: "Educational Sector",
+    title2: "Pictures for Educational Sector",
     category: "education",
     icon: <FaGraduationCap className="text-3xl text-primary" />,
     features: [
@@ -108,7 +108,7 @@ export const industries = [
   {
     title: "Health Care Sector",
     title1: "Customized Solutions",
-    title2: "Health Care Sector",
+    title2: "Pictures for Health Care Sector",
     category: "healthcare",
     icon: <FaHospitalAlt className="text-3xl text-primary" />,
     features: [

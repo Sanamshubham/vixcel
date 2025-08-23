@@ -8,33 +8,37 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Solutions from "./pages/Solutions";
 import Solution from "./components/Solution";
-import IndustryDetails from "./pages/IndustryDetails";
-
+import IndustryDetail from "./pages/IndustryDetails";
 
 const App = () => (
-  <div>
-    {/* <Services/> */}
   <Router>
     <Navbar />
-    <Routes>
-      <Route path="/" element={<Home />} />
-      {/* <Route path="/services" element={<Services/>}/> */}
-      {/* <Route path="/solution" element={<Solution/>}/> */}
-      {/* <Route path="/about" element={<About />} />
-      <Route path="/contact" element={<Contact />} /> */}
 
-      {/* <Route path="/Services" element={<Services />} />
-       <Route path="/industry/:id" element={<IndustryDetails />} /> */}
+    <Routes>
+      {/* Home */}
+      <Route path="/" element={<Home />} />
+
+      {/* About */}
+      <Route path="/about" element={<About />} />
+
+      {/* Services */}
+      <Route path="/services" element={<Services />} />
+
+      {/* Industry Detail (dynamic page) */}
+      <Route path="/industry/:id" element={<IndustryDetail />} />
+
+      {/* Solutions */}
+      <Route path="/solutions" element={<Solutions />} />
+
+      {/* Single Solution (if needed) */}
+      <Route path="/solution" element={<Solution />} />
+
+      {/* Contact */}
+      <Route path="/contact" element={<Contact />} />
     </Routes>
-    <About/>
-    <Services/>
-    {/* <Solution/> */}
-    {/* <Solution/> */}
-    {/* <IndustryDetails/> */}
-    <Contact/>
+
     <Footer />
   </Router>
-  </div>
 );
 
 export default App;

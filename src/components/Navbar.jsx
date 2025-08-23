@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import logo from "../assets/logo.jpeg"; // Make sure the path is correct
+import { Link } from "react-router-dom";
+import logo from "../assets/logo.jpeg";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -14,29 +15,50 @@ const Navbar = () => {
         <div className="flex h-16 items-center justify-between">
           {/* Logo + Brand */}
           <div className="flex items-center space-x-2">
-            <a href="/" className="flex items-center space-x-2">
+            <Link to="/" className="flex items-center space-x-2">
               <img
                 src={logo}
                 alt="Vixel Logo"
                 className="h-10 w-auto object-contain"
               />
-              <span className="hidden sm:inline text-2xl font-bold text-primary">V I X E L</span>
-            </a>
+              <span className="hidden sm:inline text-2xl font-bold text-primary">
+                V I X E L
+              </span>
+            </Link>
           </div>
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center space-x-5">
-            <a href="#solution" className="text-foreground/80 hover:text-foreground transition-colors">Solution</a>
-            <a href="#services" className="text-foreground/80 hover:text-foreground transition-colors">Services</a>
-            <a href="#about" className="text-foreground/80 hover:text-foreground transition-colors">About</a>
-            <a href="#contact" className="text-foreground/80 hover:text-foreground transition-colors">Contact</a>
-         <a
-  href="#contact"
-  className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-md h-10 px-4 py-2 text-sm font-medium"
->
-  Get Quote
-</a>
-
+            <Link
+              to="/"
+              className="text-foreground/80 hover:text-foreground transition-colors"
+            >
+              Home
+            </Link>
+            <Link
+              to="/about"
+              className="text-foreground/80 hover:text-foreground transition-colors"
+            >
+              About
+            </Link>
+            <Link
+              to="/services"
+              className="text-foreground/80 hover:text-foreground transition-colors"
+            >
+              Services
+            </Link>
+            <Link
+              to="/contact"
+              className="text-foreground/80 hover:text-foreground transition-colors"
+            >
+              Contact
+            </Link>
+            <Link
+              to="/contact"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-md h-10 px-4 py-2 text-sm font-medium"
+            >
+              Get Quote
+            </Link>
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -44,7 +66,17 @@ const Navbar = () => {
             onClick={toggleMenu}
             className="md:hidden inline-flex items-center justify-center rounded-md h-10 w-10 hover:bg-accent hover:text-accent-foreground"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-menu h-6 w-6">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="lucide lucide-menu h-6 w-6"
+            >
               <line x1="4" x2="20" y1="12" y2="12" />
               <line x1="4" x2="20" y1="6" y2="6" />
               <line x1="4" x2="20" y1="18" y2="18" />
@@ -52,16 +84,39 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Mobile Menu Items */}
+        {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden mt-2 space-y-4 text-center">
-            <a href="/Solution" className="block text-foreground/80 hover:text-foreground">Solution</a>
-            <a href="#services" className="block text-foreground/80 hover:text-foreground">Services</a>
-            <a href="#about" className="block text-foreground/80 hover:text-foreground">About</a>
-            <a href="#contact" className="block text-foreground/80 hover:text-foreground">Contact</a>
-            <button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 rounded-md py-2 text-sm font-medium">
+            <Link
+              to="/"
+              className="block text-foreground/80 hover:text-foreground"
+            >
+              Home
+            </Link>
+            <Link
+              to="/about"
+              className="block text-foreground/80 hover:text-foreground"
+            >
+              About
+            </Link>
+            <Link
+              to="/services"
+              className="block text-foreground/80 hover:text-foreground"
+            >
+              Services
+            </Link>
+            <Link
+              to="/contact"
+              className="block text-foreground/80 hover:text-foreground"
+            >
+              Contact
+            </Link>
+            <Link
+              to="/contact"
+              className="block w-full bg-primary text-primary-foreground hover:bg-primary/90 rounded-md py-2 text-sm font-medium"
+            >
               Get Quote
-            </button>
+            </Link>
           </div>
         )}
       </div>
