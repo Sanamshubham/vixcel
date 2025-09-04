@@ -6,8 +6,8 @@ import Home from "./pages/Home";
 import Services from "./pages/Services";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import Solutions from "./pages/Solutions";
-import Solution from "./components/Solution";
+// import Solutions from "./pages/Solutions";
+// import Solution from "./components/Solution";
 import IndustryDetail from "./pages/IndustryDetails";
 
 const App = () => (
@@ -27,11 +27,11 @@ const App = () => (
       {/* Industry Detail (dynamic page) */}
       <Route path="/industry/:id" element={<IndustryDetail />} />
 
-      {/* Solutions */}
-      <Route path="/solutions" element={<Solutions />} />
+      {/* Solutions
+      <Route path="/solutions" element={<Solutions />} /> 
 
-      {/* Single Solution (if needed) */}
-      <Route path="/solution" element={<Solution />} />
+      {/* Single Solution (if needed) 
+      <Route path="/solution" element={<Solution />} />  */}
 
       {/* Contact */}
       <Route path="/contact" element={<Contact />} />

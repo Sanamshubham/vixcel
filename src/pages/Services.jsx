@@ -58,7 +58,7 @@ const Services = () => {
   // };
 
   return (
-    <section className="py-16 bg-white">
+    <section id="Services" className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-8 items-start">
           {/* Industries Grid */}
