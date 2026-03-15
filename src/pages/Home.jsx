@@ -73,6 +73,7 @@ const Home = () => {
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         href="/services"
+        
         className="border border-input px-8 py-4 sm:px-10 sm:py-5 rounded-lg font-bold text-base sm:text-lg md:text-xl hover:bg-accent hover:text-accent-foreground"
       >
         View Solutions
